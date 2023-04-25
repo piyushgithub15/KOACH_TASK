@@ -1,13 +1,13 @@
 CRUD OPERATIONS
 
-#GET METHOD/Read
+# GET METHOD/Read
 ![getallMethod](https://user-images.githubusercontent.com/126078964/234291765-f9a3441a-3672-47e9-a648-6437015dda41.png)
 
-#POST METHOD/Create
+# POST METHOD/Create
 
 ![postMethod](https://user-images.githubusercontent.com/126078964/234292201-7eef28ce-fb80-4579-b35f-5f18d2dbf414.png)
 
-#PUT METHOD/UPDATE
+# PUT METHOD/UPDATE
 ![updateMethod](https://user-images.githubusercontent.com/126078964/234292327-39448512-ac6b-449b-a70c-84342887efe5.png)
 
 # DELETE METHOD/DELETE
