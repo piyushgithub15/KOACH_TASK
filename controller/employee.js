@@ -1,11 +1,9 @@
-const  Employee = require("../../models/employee_model");
+const  Employee = require("../models/employee_model");
 const mongoose = require('mongoose');
 
 exports.createEmployee = async (req, res) => {
   try {
-    
-    
-    
+        
     const {
         EmployeeName,Age,phoneNo,YearsOfExp,Department,Salary
       
@@ -34,9 +32,7 @@ exports.getEmployees = async (req, res) => {
         success: true,
         
         data: 
-         employees
-          
-        ,
+         employees,
       }
       );
   } catch (error) {
@@ -62,15 +58,11 @@ exports.deleteEmployee = async(req,res)=>{
         success: false,
         message: 'An Error occured',
     });
-
   }
-
 }
 
 exports.getOneEmployee =async(req,res)=> {
-
     try{
-
         const OneEmployee = await Employee.findById(req.params.id)
     
             res.status(201).json({
@@ -79,23 +71,19 @@ exports.getOneEmployee =async(req,res)=> {
                 data:OneEmployee
             });
     
-      }catch(error){
-    
-        
+      }catch(error){            
             res.status(500).json({
                 success: false,
                 message: 'An Error occured',
-            });
-        
+            });        
       }
 
 }
 
 exports.updateEmployee = async(req,res)=>{
-
   try{
 
-    const updatedEmployee = await Employee.findByIdAndUpdate(req.params.id,req.body)
+    const updatedEmployee = await Employee.findByIdAndUpdate(req.params.id,req.body,{new:true});
 
         res.status(201).json({
             success: true,
